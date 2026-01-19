@@ -1,90 +1,64 @@
-# Thinking Fit Check
+# Quiet Fit
 
-A small, static self-diagnostic for understanding how you think and cope under pressure.
+A small set of self-checks for people whose intelligence works well,
+but not everywhere.
 
-This is **not** a personality test.
-It does not classify traits or predict success.
-It helps people choose environments that protect their intelligence instead of burning it out.
+This is not a personality system.
+It does not rank, diagnose, or optimize people.
+
+Quiet Fit exists to help people notice when difficulty is caused by
+**context mismatch rather than personal deficiency**.
 
 ---
 
-## What this is
+## What’s included
 
-Thinking Fit Check describes thinking styles across four dimensions that strongly affect burnout risk:
+- **Thinking Fit Check**  
+  How thinking responds to pressure, commitment, and coherence.
 
-- **Commitment Sensitivity** – how strongly irreversibility and public binding affect you  
-- **Reward Timing** – whether insight or completion provides the main sense of reward  
-- **Pressure Dependence** – whether urgency improves performance or collapses it  
-- **Integrity Load** – how draining incoherence and hypocrisy feel  
+- **Learning Fit Check**  
+  Which learning formats support understanding rather than exhaust it.
 
-Burnout often happens when these dimensions are mismatched with fast, performative, high-urgency environments.
+- **Status Fit Check**  
+  Sensitivity to unspoken rank, default positioning, and quiet inequality.
 
-This tool is meant to **name the mismatch**, not “fix” the person.
+- **Context vs Condition Check**  
+  Whether difficulties change with environment or persist across contexts.
+
+Each tool runs locally in the browser.
+No data is collected.
+No tracking.
+No analytics.
 
 ---
 
 ## What this is not
 
-- Not a clinical diagnostic  
-- Not therapy  
-- Not productivity advice  
-- Not a hiring filter  
-- Not a motivation tool  
+- Not a diagnostic system
+- Not therapy
+- Not productivity advice
+- Not a hiring or screening tool
 
-It is descriptive, not prescriptive.
-
----
-
-## How it works
-
-- 16 questions
-- 0–3 scale per item
-- Scores are grouped by dimension
-- Results explain *why* certain environments feel draining or stabilizing
-- Career fit hints are based on container fit, not ability
-
-All logic runs client-side.
-No data is collected.
-No analytics.
-No tracking.
-
----
-
-## Why this exists
-
-Many intelligent people burn out not because they lack discipline or skill,
-but because their thinking style is repeatedly forced into the wrong container.
-
-This tool gives language to that experience.
+These checks are descriptive, not prescriptive.
 
 ---
 
 ## Usage
 
-- Open `thinking-fit.html` in any browser  
-- Or host it on any static host (GitHub Pages, Netlify, etc.)
-- Works offline
+Open `index.html` in any browser, or host the folder on any static host
+(GitHub Pages, Netlify, etc.).
 
-PRs welcome if they preserve:
-- non-performative tone
-- no gamification
-- no leaderboards
-- no scoring-as-identity
+You do not need to complete all checks.
+Enter where recognition happens.
 
 ---
 
 ## Design principles
 
-- Quiet by default  
-- No urgency cues  
-- No optimization pressure  
-- No “improvement” framing  
+- Quiet by default
+- No urgency
+- No scoring-as-identity
+- No forced interpretation
+- Exit is always allowed
 
-If it turns into a personality label or growth hack, it has failed.
-
----
-
-## License
-
-MIT.  
-Use freely. Modify responsibly.
+If this becomes performative, it has failed.
