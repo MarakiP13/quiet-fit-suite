@@ -1,0 +1,3 @@
+# For Founders
+
+Some people contribute the most value before decisions harden, not after execution begins. These individuals tend to notice misalignment early, surface edge cases, and question assumptions that feel “almost right” but not fully coherent. Their thinking often requires time, low pressure, and freedom from premature commitment in order to complete. In fast-moving environments, they may appear slow to start or overly cautious, when in reality they are preventing costly errors later. Supporting this kind of contribution does not mean slowing the company down. It means creating space where judgment can surface before scale, policy, or code makes revision expensive.
