@@ -294,39 +294,56 @@ button {
 
 <script>
 function showResults() {
-  const groups = {
-    pacing: ["p1","p2"],
-    pressure: ["r1","r2"],
-    commitment: ["c1","c2"]
-  };
+  // reset
+  let pacing = 0;
+  let pressure = 0;
+  let commitment = 0;
 
-  let scores = { pacing: 0, pressure: 0, commitment: 0 };
-  let answered = 0;
-
-  for (const [group, qs] of Object.entries(groups)) {
-    qs.forEach(q => {
-      const checked = document.querySelector(`input[name="${q}"]:checked`);
-      if (!checked) return;
-      scores[group] += Number(checked.value);
-      answered++;
-    });
+  // helper
+  function val(name) {
+    const el = document.querySelector(`input[name="${name}"]:checked`);
+    if (!el) return null;
+    return Number(el.value);
   }
 
-  if (answered < 6) {
+  const answers = [
+    val("p1"), val("p2"),
+    val("r1"), val("r2"),
+    val("c1"), val("c2")
+  ];
+
+  if (answers.some(v => v === null)) {
     alert("Answer all prompts first.");
     return;
   }
 
-  const pacingHigh = scores.pacing >= 1.5;
-  const pressureHigh = scores.pressure >= 1.5;
-  const commitmentHigh = scores.commitment >= 1.5;
+  pacing = val("p1") + val("p2");
+  pressure = val("r1") + val("r2");
+  commitment = val("c1") + val("c2");
 
-  let resultType = "mixed";
-  if (pacingHigh && pressureHigh && commitmentHigh) resultType = "internal";
-  else if (!pacingHigh && !pressureHigh && !commitmentHigh) resultType = "external";
+  // thresholds
+  const pacingHigh = pacing >= 1.5;
+  const pressureHigh = pressure >= 1.5;
+  const commitmentHigh = commitment >= 1.5;
 
-  document.querySelectorAll(".result-block").forEach(b => b.style.display = "none");
-  document.getElementById("result-" + resultType).style.display = "block";
+  let resultType;
+
+  if (pacingHigh && pressureHigh && commitmentHigh) {
+    resultType = "internal";
+  } else if (!pacingHigh && !pressureHigh && !commitmentHigh) {
+    resultType = "external";
+  } else {
+    resultType = "mixed";
+  }
+
+  // hide all
+  document.querySelectorAll(".result-block")
+    .forEach(el => el.style.display = "none");
+
+  // show correct one
+  document.getElementById("result-" + resultType)
+    .style.display = "block";
+
   document.getElementById("results").style.display = "block";
   document.getElementById("results").scrollIntoView({ behavior: "smooth" });
 }
